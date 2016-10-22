@@ -13,15 +13,12 @@ body {
 
 .container-welcome {
   background-color: #1F1F1F;
-  height: 100vh; }
-  .container-welcome .background {
-    z-index: 2; }
-  .container-welcome .foreground {
-    z-index: 5; }
+  height: 100vh;
+  display: flex; }
   .container-welcome .img-glare {
     z-index: 0;
-    height: 100vh;
     position: absolute;
+    height: 100vh;
     top: 0;
     right: 0; }
   .container-welcome .navigation {
@@ -29,16 +26,19 @@ body {
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
     -webkit-animation-duration: 1s;
-    animation-duration: 1s; }
+    animation-duration: 1s;
+    justify-content: space-between; }
   .container-welcome .logo {
-    max-width: 30px;
-    float: left;
-    margin-left: 1.736rem; }
+    position: relative;
+    z-index: 2;
+    max-width: 30px; }
   .container-welcome .menu {
-    max-width: 30px;
-    float: right;
-    margin-right: 1.736rem; }
+    position: relative;
+    z-index: 2;
+    max-width: 30px; }
   .container-welcome .welcome {
+    position: relative;
+    z-index: 2;
     text-align: center;
     padding-top: calc(50vh - 10.42rem);
     -webkit-animation-duration: 3s;
