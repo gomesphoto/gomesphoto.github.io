@@ -1,0 +1,115 @@
+@font-face {
+ font-family: 'Canter';
+  src: url('/fonts/Canter Bold.otf');
+}
+
+$dark: #1F1F1F;
+$beige: #CCBBA3;
+$welcome: #CCA166;
+$main-font: Lato, sans-serif;
+$logo-font: Canter, monospace;
+$xs-screen: 480px;
+$sm-screen: 768px;
+$md-screen: 960px;
+$lg-screen: 1200px;
+
+
+:root {
+	font-size: 1.38888vw;
+}
+body {
+	color: $beige;
+	font-family: $main-font;
+	padding: 0rem;
+	margin: 0rem;
+}
+
+.container-welcome {
+	background-color: $dark;
+	height: 100vh;
+	.background {
+		z-index: 2;
+	}
+	.foreground {
+		z-index: 5;
+	}	
+	.img-glare {
+		z-index: 0;
+		height: 100vh;
+		position:absolute;
+		top: 0;
+		right: 0;
+	}
+	.navigation {
+		padding-top: 1.736rem	;
+		-webkit-animation-delay: 3s;
+  	animation-delay: 3s;
+		-webkit-animation-duration: 1s;
+  	animation-duration: 1s;
+	}
+	.logo {
+		max-width: 30px;
+		float:left;
+		margin-left: 1.736rem;	
+	}
+	.menu {
+		max-width: 30px;
+		float:right;
+		margin-right: 1.736rem;	
+	}
+	.welcome {
+		text-align: center;
+		padding-top: calc(50vh - 10.42rem);
+		-webkit-animation-duration: 3s;
+  	animation-duration: 3s;
+  	-webkit-animation-delay: 1s;
+  	animation-delay: 1s;
+		h1 {
+			color: $welcome;
+			letter-spacing: 10px;
+			font-size: 4rem;
+			@media screen and (max-width: $md-screen) {
+				font-size: 5rem;
+			}
+			@media screen and (max-width: $sm-screen) {
+				font-size: 7rem;
+			}
+			@media screen and (max-width: $xs-screen) {
+				font-size: 12rem;
+			}
+			
+		}
+		h2 {
+			font-size: 1.5rem; 
+			@media screen and (max-width: $md-screen) {
+				font-size: 2rem;
+			}
+			@media screen and (max-width: $sm-screen) {
+				font-size: 4rem;
+			}
+			
+		}
+	}
+	.mousescroll {
+		position: absolute;
+		bottom: 22px;
+		left: 0;
+		width: 44px;
+		margin-left: calc(50vw - 22px);
+	}
+}
+
+.container-portfolio {
+	height: 100vh;
+	.img-responsive {
+		height: 100vh;
+		float: right;
+		padding-right: 5.20833vw;
+	}
+}
+
+
+.container-portfolio {
+	height: 100vh;
+}
+
