@@ -3,15 +3,9 @@
   src: url("/fonts/Canter Bold.otf"); }
 
 :root {
-  font-size: 1.38888vw;
-  box-sizing: border-box; }
+  font-size: 1.38888vw; }
 
 body {
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  -webkit-perspective: 1px;
-  perspective: 1px;
   color: #CCBBA3;
   font-family: Lato, sans-serif;
   padding: 0rem;
@@ -107,16 +101,16 @@ body {
       transition: opacity 0.5s; }
     @media screen and (min-width: 1200px) {
       .container-portfolio .carousel-control.right {
-        margin-right: -10.38vw; } }
+        margin-right: -10.3vw; } }
     @media screen and (min-width: 960px) {
       .container-portfolio .carousel-control.right {
-        margin-right: -10.38vw; } }
+        margin-right: -10.3vw; } }
     @media screen and (min-width: 1200px) {
       .container-portfolio .carousel-control.left {
-        margin-left: -10.38vw; } }
+        margin-left: -10.3vw; } }
     @media screen and (min-width: 960px) {
       .container-portfolio .carousel-control.left {
-        margin-left: -10.38vw; } }
+        margin-left: -10.3vw; } }
   .container-portfolio .website-image {
     float: right !important; }
     @media screen and (max-width: 960px) {
@@ -216,8 +210,17 @@ body {
   font-weight: 300;
   font-size: 2.4rem;
   text-align: center;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-  .container-about .background {
-    -webkit-transform: translateZ(-1px) scale(2);
-    transform: translateZ(-1px) scale(2); }
+  background-image: url(/images/parallax.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .container-about .foreground {
+    margin-top: 20px; }
+  .container-about .list-inline:first-of-type {
+    margin-top: 60px; }
+  .container-about .list-inline li {
+    width: 150px;
+    margin: 20px 40px; }

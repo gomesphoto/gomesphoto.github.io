@@ -16,14 +16,8 @@ $lg-screen: 1200px;
 
 :root {
 	font-size: 1.38888vw;
-	box-sizing: border-box;
 }
 body {
-	overflow-y: auto;
-	overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
-	-webkit-perspective: 1px;
-  perspective: 1px;
 	color: $beige;
 	font-family: $main-font;
 	padding: 0rem;
@@ -143,19 +137,19 @@ body {
 
 	  &.right {
 	  	@media screen and (min-width: $lg-screen) {
-	  		margin-right: -10.38vw;
+	  		margin-right: -10.3vw;
 	  	}
 	  	@media screen and (min-width: $md-screen) {
-	  		margin-right: -10.38vw;
+	  		margin-right: -10.3vw;
 	  	}
 
 	  }
 	  &.left {
 	  	@media screen and (min-width: $lg-screen) {
-	  		margin-left: -10.38vw;
+	  		margin-left: -10.3vw;
 	  	}
 	  	@media screen and (min-width: $md-screen) {
-	  		margin-left: -10.38vw;
+	  		margin-left: -10.3vw;
 	  	}
 
 	  }
@@ -287,14 +281,24 @@ body {
 	font-weight: 300;
 	font-size: 2.4rem;
 	text-align: center;
-	
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-	.background {
-		-webkit-transform: translateZ(-1px) scale(2);
-  	transform: translateZ(-1px) scale(2);
-	}
-	.foreground {
+	background-image: url(/images/parallax.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
+	.foreground {
+		margin-top: 20px;
+	}
+	.list-inline {
+		&:first-of-type {
+			margin-top: 60px;
+		}
+		li {
+			width: 150px;
+			margin: 20px 40px;
+		}
 	}
 }
