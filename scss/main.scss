@@ -16,8 +16,14 @@ $lg-screen: 1200px;
 
 :root {
 	font-size: 1.38888vw;
+	box-sizing: border-box;
 }
 body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	-webkit-perspective: 1px;
+  perspective: 1px;
 	color: $beige;
 	font-family: $main-font;
 	padding: 0rem;
@@ -27,7 +33,6 @@ body {
 .container-welcome {
 	background-color: $dark;
 	height: 100vh;
-	display: flex;
 	.img-glare {
 		z-index: 0;
 		position: absolute;
@@ -36,32 +41,44 @@ body {
 		right: 0;
 	}
 	.navigation {
-		padding-top: 1.736rem	;
-		-webkit-animation-delay: 3s;
-  	animation-delay: 3s;
+		-webkit-animation-delay: 2s;
+		animation-delay: 2s;
 		-webkit-animation-duration: 1s;
-  	animation-duration: 1s;
-  	justify-content: space-between;
+		animation-duration: 1s;
+		position: absolute;
+		width: 100vw;
+		.nav-items {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding: 2rem;
+		}
+	  .logo {
+			position: relative;
+			z-index: 2;
+			max-height: 30px;	
+		}
+		.menu {
+			position: relative;
+			z-index: 2;
+			max-height: 30px;
+		}
 	}
-	.logo {
-		position: relative;
-		z-index: 2;
-		max-width: 30px;	
-	}
-	.menu {
-		position: relative;
-		z-index: 2;
-		max-width: 30px;
-	}
+
 	.welcome {
+		height: 100vh;
 		position: relative;
 		z-index: 2;
 		text-align: center;
-		padding-top: calc(50vh - 10.42rem);
 		-webkit-animation-duration: 3s;
   	animation-duration: 3s;
   	-webkit-animation-delay: 1s;
   	animation-delay: 1s;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	
+
 		h1 {
 			color: $welcome;
 			letter-spacing: 10px;
@@ -85,10 +102,17 @@ body {
 			@media screen and (max-width: $sm-screen) {
 				font-size: 4rem;
 			}
+			@media screen and (max-width: $xs-screen) {
+				font-size: 5rem;
+			}
 			
 		}
 	}
 	.mousescroll {
+		-webkit-animation-delay: 2s;
+		animation-delay: 2s;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
 		position: absolute;
 		bottom: 22px;
 		left: 0;
@@ -97,17 +121,180 @@ body {
 	}
 }
 
+#portfolio-carousel {
+	@media screen and (max-width:$md-screen) {
+		//margin-top: 12vw;
+	}
+}
+
 .container-portfolio {
 	height: 100vh;
-	.img-responsive {
-		height: 100vh;
-		float: right;
-		padding-right: 5.20833vw;
+  display: flex;
+  align-items: center;
+	.carousel-control {
+	  background: transparent !important;
+	  opacity: 0;
+	  color: $dark;
+		z-index: 5;
+	  &:hover {
+			opacity: 1;
+			transition: opacity 0.5s;
+	  }
+
+	  &.right {
+	  	@media screen and (min-width: $lg-screen) {
+	  		margin-right: -10.38vw;
+	  	}
+	  	@media screen and (min-width: $md-screen) {
+	  		margin-right: -10.38vw;
+	  	}
+
+	  }
+	  &.left {
+	  	@media screen and (min-width: $lg-screen) {
+	  		margin-left: -10.38vw;
+	  	}
+	  	@media screen and (min-width: $md-screen) {
+	  		margin-left: -10.38vw;
+	  	}
+
+	  }
+
+	}
+	.carousel-inner {
+		//margin: 50px;
+	}
+	.website-image {
+		float: right !important;
+		
+  	@media screen and (max-width: $md-screen){
+  		padding: 4rem;
+  		width: 100vw;
+  		max-width: 800px;
+  	}
+
+	}
+	.description-wrapper {
+			color: $dark;
+			height: 100%;
+			font-weight:300;
+		  position: absolute;
+	    top: 6rem;
+		  text-shadow: none;
+		  text-align: left;
+			font-size: 1.5rem;
+			@media screen and (max-width: $md-screen) {
+				font-size: 1.5rem;
+				margin: 0 2vw;
+			  position: relative;
+			  top: 0;
+			}
+			@media screen and (max-width: $sm-screen) {
+			  font-size: 2rem;
+			  margin: 0 2vw;
+			  position: relative;
+			  top: 0;
+			}
+		}
+		.website-title {
+			display: inline-block;
+			font-weight:400;
+			font-size: 2.4rem;
+			@media screen and (max-width: $md-screen) {
+				font-size: 4rem;
+			}
+			@media screen and (max-width: $sm-screen) {
+				font-size: 6rem;
+			}
+
+		}
+		.website-tag {
+			color: $beige;
+			display: inline;
+			padding: 0 20px;
+		}
+		.website-short {
+			min-height: 50px;
+			@media screen and (max-width: $sm-screen) {
+				font-size: 3rem;
+			}
+		}
+		.view-button {
+			font-weight:300;
+			background-color: $dark;
+			color: $beige;
+			border: 0;
+		}
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: -50px;
+  left: 2.8vw;
+  z-index: 15;
+  li {
+  	color: $dark;
+  	border: 1px solid $dark;
+  	&.active {
+  		background-color: $beige;
+		  width: 10px;
+		  height: 10px;
+		  margin: 1px;
+  	}
+  }
+  @media screen and (max-width: $sm-screen) {
+  	left: 50%;
+  }
+}
+
+// Carousel Fade Transition Rules
+.carousel-fade {
+	.carousel-inner {
+		.item {
+			transition-property: opacity;
+		}
+
+		.item,
+		.active.left,
+		.active.right {
+			opacity: 0;
+		}
+
+		.active,
+		.next.left,
+		.prev.right {
+			opacity: 1;
+		}
+
+		.next,
+		.prev,
+		.active.left,
+		.active.right {
+			left: 0;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	.carousel-control {
+		z-index: 2;
 	}
 }
 
 
-.container-portfolio {
+.container-about {
 	height: 100vh;
-}
+	color: $dark;
+	font-weight: 300;
+	font-size: 2.4rem;
+	text-align: center;
+	
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+	.background {
+		-webkit-transform: translateZ(-1px) scale(2);
+  	transform: translateZ(-1px) scale(2);
+	}
+	.foreground {
 
+	}
+}

@@ -13,36 +13,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="/css/animate.css">
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
-<div class="container-welcome">
-	<img src="images/glare.png" alt="glare" class="img-responsive img-glare">
-	<div class="navigation animated fadeIn">
-		<img src="images/logo.png" alt="" class="logo img-responsive">
-		<img class="menu img-responsive" src="images/menu.svg" alt="menu">
-	</div>
-	<div class="welcome animated fadeIn">
-		<h1>PEDRO GOMES</h1>
-		<h2>Web Designer & Developer</h2>
-	</div>
-	<div class="mousescroll">
-		<img src="images/mouse.png" alt="mouse scroll" class="img-responsive">
-	</div>
-	
-</div>
-<div class="container-portfolio">
-	<img class="img-responsive" src="images/portfolio/bathimpact.jpg" alt="bathimpact">
-</div>
-<div class="container-about">
-	
-</div>
-<div class="container-contact">
-	
-</div>
 
-	
+
+
+	<div class="container-welcome">
+		<img src="images/glare.png" alt="glare" class="img-responsive img-glare">
+		<div class="navigation animated fadeIn">
+			<div class="nav-items">
+				<img src="images/logo.png" alt="" class="logo img-responsive">
+				<img class="menu img-responsive" src="images/menu.svg" alt="menu">
+			</div>
+		</div>
+		<div class="welcome animated fadeIn">
+			<div class="welcome-text">
+				<h1>PEDRO GOMES</h1>
+				<h2>Web Designer & Developer</h2>
+			</div>
+		</div>
+		<div class="mousescroll animated fadeIn">
+			<img src="images/mouse.png" alt="mouse scroll" class="img-responsive">
+		</div>
+	</div>
+
+	<div class="container-portfolio container">
+		<div id="portfolio-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+			<ol class="carousel-indicators">
+				<li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#portfolio-carousel" data-slide-to="1"></li>
+				<li data-target="#portfolio-carousel" data-slide-to="2"></li>
+				<li data-target="#portfolio-carousel" data-slide-to="3"></li>
+				<li data-target="#portfolio-carousel" data-slide-to="4"></li>
+			</ol>
+
+			<div  class="carousel-inner" role="listbox">
+
+				<div id="SilverGirl"class="item active">
+					<div class="row">
+						<div class="website-image col-md-6">
+							<img class="img-responsive website-image" src="images/portfolio/silvergirl.jpg" alt="silvergirl">
+						</div>
+						<div class="website-description col-md-6">
+							<div class="description-wrapper">
+								<h1 class="website-title">Silver Girl</h1><span class="website-tag">Squarespace</span>
+								<p class="website-short">Fast-growing Fashion & Style Blog with diverse content and smooth user experience. High quality content, modern design, fluid and intuitive image display</p>
+								<a href="http://silvergirl.org" target="_blank"><button class="btn btn-default view-button">View Website</button></a>
+							</div>
+						</div>
+					</div>	
+				</div> <!-- Silver Girl Slide -->
+
+				<div id="Bathimpact"class="item">
+					<div class="row">
+						<div class="website-image col-md-6 pull-right">
+							<img class="img-responsive website-image" src="images/portfolio/bathimpact.jpg" alt="bathimpact">
+						</div>
+						<div class="website-description col-md-6">
+							<div class="description-wrapper">
+								<h1 class="website-title">Bathimpact</h1><span class="website-tag">Wordpress</span>
+								<p class="website-short">University of Bath student newspaper published online and print. Simple and clean design for reading with intuitive social sharing and related articles</p>
+								<a href="http://bathimpact.co.uk" target="_blank"><button class="btn btn-default view-button">View Website</button></a>
+							</div>
+						</div>
+					</div>	
+				</div> <!-- Bahtimpact Slide -->
+
+				<div id="CityCyles" class="item">
+					<div class="row">
+						<div class="website-image col-md-6 pull-right">
+							<img class="img-responsive website-image" src="images/portfolio/citycycles.jpg" alt="citycycles">
+						</div>
+						<div class="website-description col-md-6">
+							<div class="description-wrapper">
+								<h1 class="website-title">City Cycles</h1><span class="website-tag">Concept</span>
+								<p class="website-short">Mockup project of a fictional bicycle brand's online shop. Modern, user-friendly design with floating elements and parallax design.</p>
+								<a href="/images/pdf/CityCyclesNew.pdf" target="_blank"><button class="btn btn-default view-button">View Mockup</button></a>
+							</div>
+						</div>
+					</div>	
+				</div> <!-- City Cycles Slide -->
+
+				<div id="FriendsClothing" class="item">
+					<div class="row">
+						<div class="website-image col-md-6 pull-right">
+							<img class="img-responsive website-image" src="images/portfolio/friendsclothing.jpg" alt="friends clothing">
+						</div>
+						<div class="website-description col-md-6">
+							<div class="description-wrapper">
+								<h1 class="website-title">Friends Clothing</h1><span class="website-tag">Squarespace</span>
+								<p class="website-short">Massive Online Store for curated second-hand and new-with-tag shopping. Multiple sections and sub-sections with special category tags with different styling</p>
+								<a href="http://friendsclothing.co.uk" target="_blank"><button class="btn btn-default view-button">View Website</button></a>
+							</div>
+						</div>
+					</div>	
+				</div> <!-- Friends Clothing Slide -->
+
+				<div id="GabbanaGirls" class="item">
+					<div class="row">
+						<div class="website-image col-md-6 pull-right">
+							<img class="img-responsive website-image" src="images/portfolio/gabbanagirls.jpg" alt="gabbana girls">
+						</div>
+						<div class="website-description col-md-6">
+							<div class="description-wrapper">
+								<h1 class="website-title">Gabbana Girls</h1><span class="website-tag">Squarespace</span>
+								<p class="website-short">Small clothing line for young girls. Sectioned by ages and categories. Fun and simple display with fixed side menu with emphasis on catalogue photos</p>
+								<a href="http://gabbanagirls.co.uk" target="_blank"><button class="btn btn-default view-button">View Website</button></a>
+							</div>
+						</div>
+					</div>	
+				</div> <!-- Gabban Girls Slide -->
+			</div>
+
+			<a class="left carousel-control" href="#portfolio-carousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#portfolio-carousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="container-about">
+		<img class="background" src="images/parallax.jpg" alt="web design">
+		<div class="foreground">
+			<p>Design and development of reponsive websites </br> Expertise in Ecommerce and Digital Media </br> Great UI/UX that maximizes website conversions</p>
+		</div>
+	</div>
+
+	<div class="container-contact">
+	</div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

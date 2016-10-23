@@ -3,9 +3,15 @@
   src: url("/fonts/Canter Bold.otf"); }
 
 :root {
-  font-size: 1.38888vw; }
+  font-size: 1.38888vw;
+  box-sizing: border-box; }
 
 body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-perspective: 1px;
+  perspective: 1px;
   color: #CCBBA3;
   font-family: Lato, sans-serif;
   padding: 0rem;
@@ -13,8 +19,7 @@ body {
 
 .container-welcome {
   background-color: #1F1F1F;
-  height: 100vh;
-  display: flex; }
+  height: 100vh; }
   .container-welcome .img-glare {
     z-index: 0;
     position: absolute;
@@ -22,29 +27,37 @@ body {
     top: 0;
     right: 0; }
   .container-welcome .navigation {
-    padding-top: 1.736rem;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    justify-content: space-between; }
-  .container-welcome .logo {
-    position: relative;
-    z-index: 2;
-    max-width: 30px; }
-  .container-welcome .menu {
-    position: relative;
-    z-index: 2;
-    max-width: 30px; }
+    position: absolute;
+    width: 100vw; }
+    .container-welcome .navigation .nav-items {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 2rem; }
+    .container-welcome .navigation .logo {
+      position: relative;
+      z-index: 2;
+      max-height: 30px; }
+    .container-welcome .navigation .menu {
+      position: relative;
+      z-index: 2;
+      max-height: 30px; }
   .container-welcome .welcome {
+    height: 100vh;
     position: relative;
     z-index: 2;
     text-align: center;
-    padding-top: calc(50vh - 10.42rem);
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
     -webkit-animation-delay: 1s;
-    animation-delay: 1s; }
+    animation-delay: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .container-welcome .welcome h1 {
       color: #CCA166;
       letter-spacing: 10px;
@@ -66,7 +79,14 @@ body {
       @media screen and (max-width: 768px) {
         .container-welcome .welcome h2 {
           font-size: 4rem; } }
+      @media screen and (max-width: 480px) {
+        .container-welcome .welcome h2 {
+          font-size: 5rem; } }
   .container-welcome .mousescroll {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     position: absolute;
     bottom: 22px;
     left: 0;
@@ -74,11 +94,130 @@ body {
     margin-left: calc(50vw - 22px); }
 
 .container-portfolio {
-  height: 100vh; }
-  .container-portfolio .img-responsive {
-    height: 100vh;
-    float: right;
-    padding-right: 5.20833vw; }
+  height: 100vh;
+  display: flex;
+  align-items: center; }
+  .container-portfolio .carousel-control {
+    background: transparent !important;
+    opacity: 0;
+    color: #1F1F1F;
+    z-index: 5; }
+    .container-portfolio .carousel-control:hover {
+      opacity: 1;
+      transition: opacity 0.5s; }
+    @media screen and (min-width: 1200px) {
+      .container-portfolio .carousel-control.right {
+        margin-right: -10.38vw; } }
+    @media screen and (min-width: 960px) {
+      .container-portfolio .carousel-control.right {
+        margin-right: -10.38vw; } }
+    @media screen and (min-width: 1200px) {
+      .container-portfolio .carousel-control.left {
+        margin-left: -10.38vw; } }
+    @media screen and (min-width: 960px) {
+      .container-portfolio .carousel-control.left {
+        margin-left: -10.38vw; } }
+  .container-portfolio .website-image {
+    float: right !important; }
+    @media screen and (max-width: 960px) {
+      .container-portfolio .website-image {
+        padding: 4rem;
+        width: 100vw;
+        max-width: 800px; } }
+  .container-portfolio .description-wrapper {
+    color: #1F1F1F;
+    height: 100%;
+    font-weight: 300;
+    position: absolute;
+    top: 6rem;
+    text-shadow: none;
+    text-align: left;
+    font-size: 1.5rem; }
+    @media screen and (max-width: 960px) {
+      .container-portfolio .description-wrapper {
+        font-size: 1.5rem;
+        margin: 0 2vw;
+        position: relative;
+        top: 0; } }
+    @media screen and (max-width: 768px) {
+      .container-portfolio .description-wrapper {
+        font-size: 2rem;
+        margin: 0 2vw;
+        position: relative;
+        top: 0; } }
+  .container-portfolio .website-title {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 2.4rem; }
+    @media screen and (max-width: 960px) {
+      .container-portfolio .website-title {
+        font-size: 4rem; } }
+    @media screen and (max-width: 768px) {
+      .container-portfolio .website-title {
+        font-size: 6rem; } }
+  .container-portfolio .website-tag {
+    color: #CCBBA3;
+    display: inline;
+    padding: 0 20px; }
+  .container-portfolio .website-short {
+    min-height: 50px; }
+    @media screen and (max-width: 768px) {
+      .container-portfolio .website-short {
+        font-size: 3rem; } }
+  .container-portfolio .view-button {
+    font-weight: 300;
+    background-color: #1F1F1F;
+    color: #CCBBA3;
+    border: 0; }
 
-.container-portfolio {
-  height: 100vh; }
+.carousel-indicators {
+  position: absolute;
+  bottom: -50px;
+  left: 2.8vw;
+  z-index: 15; }
+  .carousel-indicators li {
+    color: #1F1F1F;
+    border: 1px solid #1F1F1F; }
+    .carousel-indicators li.active {
+      background-color: #CCBBA3;
+      width: 10px;
+      height: 10px;
+      margin: 1px; }
+  @media screen and (max-width: 768px) {
+    .carousel-indicators {
+      left: 50%; } }
+
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity; }
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0; }
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0); }
+
+.carousel-fade .carousel-control {
+  z-index: 2; }
+
+.container-about {
+  height: 100vh;
+  color: #1F1F1F;
+  font-weight: 300;
+  font-size: 2.4rem;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  .container-about .background {
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2); }
