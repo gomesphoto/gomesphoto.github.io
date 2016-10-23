@@ -128,7 +128,7 @@ body {
   align-items: center;
 	.carousel-control {
 	  background: transparent !important;
-	  opacity: 0;
+	  opacity: 0.2;
 	  color: $dark;
 		z-index: 5;
 	  &:hover {

@@ -94,7 +94,7 @@ body {
   align-items: center; }
   .container-portfolio .carousel-control {
     background: transparent !important;
-    opacity: 0;
+    opacity: 0.2;
     color: #1F1F1F;
     z-index: 5; }
     .container-portfolio .carousel-control:hover {
