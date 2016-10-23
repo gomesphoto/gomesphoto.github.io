@@ -167,6 +167,11 @@ body {
   		width: 100vw;
   		max-width: 800px;
   	}
+  	@media screen and (min-width: $xs-screen) and (max-width: $sm-screen){
+  		padding: 0 4rem;
+  		width: 70vw;
+  		max-width: 800px;
+  	}
 
 	}
 	.description-wrapper {
@@ -291,15 +296,50 @@ body {
 	align-items: center;
 
 	.foreground {
-		margin-top: 20px;
+		margin-top: 2rem;
+		@media screen and (max-width:$md-screen) {
+			font-size: 3rem;
+		}
+		@media screen and (max-width:$sm-screen) {
+			font-size: 4rem;
+		}
 	}
 	.list-inline {
 		&:first-of-type {
-			margin-top: 60px;
+			margin-top: 3rem;
 		}
 		li {
-			width: 150px;
-			margin: 20px 40px;
+			width: 7.5rem;
+			margin: 1rem 2rem;
+			@media screen and (max-width:$md-screen) {
+				width: 100px;
 		}
+		}
+	}
+}
+.container-contact {
+	color: $dark;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	#form {
+		width: 80vw;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.form-control, {
+		border-color: $beige;
+		box-shadow: inset 0 1px 1px rgba(204,187,163,0.5);
+		&:focus {
+			box-shadow: inset 0 4px 8px rgba(204,187,163,0.3);
+		}
+	}
+	.submit-button {
+		border: 0;
+		font-weight: 300;
+		color: $beige;
+		background-color: $dark;
 	}
 }

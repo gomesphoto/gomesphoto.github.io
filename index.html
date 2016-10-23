@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="container-portfolio container">
-		<div id="portfolio-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+		<div id="portfolio-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
 			<ol class="carousel-indicators">
 				<li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
 				<li data-target="#portfolio-carousel" data-slide-to="1"></li>
@@ -138,7 +138,7 @@
 		</div>
 	</div>
 
-	<div class="container-about">
+	<div class="container-about container-fluid">
 		<div class="foreground">
 			<p>Design and development of reponsive websites </br> Expertise in Ecommerce and Digital Media </br> Great UI/UX that maximizes website conversions</p>
 			<ul class="first-row list-inline">
@@ -156,7 +156,37 @@
 		</div>
 	</div>
 
-	<div class="container-contact">
+	<div class="container-contact container-fluid">
+		<div class="wrapper-contact">
+
+			<div id="form" class="contact-form">
+				<h2 class="">Contact</h2>	
+				<p>To get to know me, you can view my Facebook, Twitter and LinkedIn linked in the footer.<br>Feel free to contact me below for more information.</p>
+
+				<form action="https://formspree.io/pedrogomes94@gmail.com" method="POST">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" name="name">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" name="email">
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" class="form-control" name="subject">
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea name="message" class="form-control" rows="5"></textarea>
+					</div>
+					<button type="submit" class="btn submit-button btn-success pull-right">Send</button>
+
+				</form>
+			</div>
+
+		</div>
+
 	</div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
