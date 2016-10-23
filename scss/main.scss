@@ -22,6 +22,7 @@ body {
 	font-family: $main-font;
 	padding: 0rem;
 	margin: 0rem;
+	overflow-x:hidden;
 }
 
 .container-welcome {
@@ -281,7 +282,7 @@ body {
 	font-weight: 300;
 	font-size: 2.4rem;
 	text-align: center;
-	background-image: url(../images/parallax.jpg);
+	background-image: url(/images/parallax.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
