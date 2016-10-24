@@ -10,6 +10,7 @@ body {
   font-family: Lato, sans-serif;
   padding: 0rem;
   margin: 0rem;
+  overflow-y: auto;
   overflow-x: hidden; }
 
 .container-welcome {
@@ -32,7 +33,7 @@ body {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      padding: 2rem; }
+      padding: 2rem 2rem 0; }
     .container-welcome .navigation .logo {
       position: relative;
       z-index: 2;
@@ -41,6 +42,9 @@ body {
       position: relative;
       z-index: 2;
       max-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .container-welcome .navigation .menu {
+          margin-right: 1.8rem; } }
   .container-welcome .welcome {
     height: 100vh;
     position: relative;
@@ -54,29 +58,27 @@ body {
     justify-content: center;
     align-items: center; }
     .container-welcome .welcome h1 {
+      font-family: Canter, monospace;
       color: #CCA166;
-      letter-spacing: 10px;
-      font-size: 4rem; }
+      letter-spacing: 16px;
+      font-size: 8rem; }
       @media screen and (max-width: 960px) {
         .container-welcome .welcome h1 {
-          font-size: 5rem; } }
+          font-size: 10rem; } }
       @media screen and (max-width: 768px) {
         .container-welcome .welcome h1 {
-          font-size: 7rem; } }
+          font-size: 12rem; } }
       @media screen and (max-width: 480px) {
         .container-welcome .welcome h1 {
-          font-size: 12rem; } }
+          font-size: 18rem; } }
     .container-welcome .welcome h2 {
       font-size: 1.5rem; }
       @media screen and (max-width: 960px) {
         .container-welcome .welcome h2 {
           font-size: 2rem; } }
-      @media screen and (max-width: 768px) {
-        .container-welcome .welcome h2 {
-          font-size: 4rem; } }
       @media screen and (max-width: 480px) {
         .container-welcome .welcome h2 {
-          font-size: 5rem; } }
+          font-size: 4rem; } }
   .container-welcome .mousescroll {
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
@@ -93,25 +95,20 @@ body {
   display: flex;
   align-items: center; }
   .container-portfolio .carousel-control {
+    position: relative;
     background: transparent !important;
     opacity: 0.2;
     color: #1F1F1F;
-    z-index: 5; }
+    z-index: 2; }
     .container-portfolio .carousel-control:hover {
       opacity: 1;
       transition: opacity 0.5s; }
-    @media screen and (min-width: 1200px) {
-      .container-portfolio .carousel-control.right {
-        margin-right: -10.3vw; } }
-    @media screen and (min-width: 960px) {
-      .container-portfolio .carousel-control.right {
-        margin-right: -10.3vw; } }
-    @media screen and (min-width: 1200px) {
-      .container-portfolio .carousel-control.left {
-        margin-left: -10.3vw; } }
-    @media screen and (min-width: 960px) {
-      .container-portfolio .carousel-control.left {
-        margin-left: -10.3vw; } }
+    .container-portfolio .carousel-control.right span {
+      margin-right: 0;
+      right: 0; }
+    .container-portfolio .carousel-control.left span {
+      margin-left: 0;
+      left: 0; }
   .container-portfolio .website-image {
     float: right !important; }
     @media screen and (max-width: 960px) {
@@ -132,10 +129,10 @@ body {
     top: 6rem;
     text-shadow: none;
     text-align: left;
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
     @media screen and (max-width: 960px) {
       .container-portfolio .description-wrapper {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 0 2vw;
         position: relative;
         top: 0; } }
@@ -159,11 +156,9 @@ body {
     color: #CCBBA3;
     display: inline;
     padding: 0 20px; }
-  .container-portfolio .website-short {
-    min-height: 50px; }
-    @media screen and (max-width: 768px) {
-      .container-portfolio .website-short {
-        font-size: 3rem; } }
+  @media screen and (max-width: 768px) {
+    .container-portfolio .website-short {
+      font-size: 3rem; } }
   .container-portfolio .view-button {
     font-weight: 300;
     background-color: #1F1F1F;
@@ -173,15 +168,17 @@ body {
 .carousel-indicators {
   position: absolute;
   bottom: -50px;
-  left: 2.8vw;
+  left: 4.3vw;
   z-index: 15; }
   .carousel-indicators li {
     color: #1F1F1F;
-    border: 1px solid #1F1F1F; }
+    border: 1px solid #1F1F1F;
+    width: 15px;
+    height: 15px; }
     .carousel-indicators li.active {
       background-color: #CCBBA3;
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 15px;
       margin: 1px; }
   @media screen and (max-width: 768px) {
     .carousel-indicators {
@@ -207,9 +204,6 @@ body {
   left: 0;
   transform: translate3d(0, 0, 0); }
 
-.carousel-fade .carousel-control {
-  z-index: 2; }
-
 .container-about {
   height: 100vh;
   color: #1F1F1F;
@@ -224,40 +218,71 @@ body {
   justify-content: center;
   align-items: center; }
   .container-about .foreground {
-    margin-top: 2rem; }
+    margin-top: 1.7rem; }
     @media screen and (max-width: 960px) {
       .container-about .foreground {
-        font-size: 3rem; } }
+        font-size: 2.5rem; } }
     @media screen and (max-width: 768px) {
       .container-about .foreground {
-        font-size: 4rem; } }
+        font-size: 3.33rem; } }
   .container-about .list-inline:first-of-type {
     margin-top: 3rem; }
   .container-about .list-inline li {
-    width: 7.5rem;
-    margin: 1rem 2rem; }
+    width: 7rem;
+    margin: 1rem 2.5rem; }
     @media screen and (max-width: 960px) {
       .container-about .list-inline li {
         width: 100px; } }
 
 .container-contact {
+  font-family: Lato, sans-serif;
+  background-color: rgba(204, 187, 163, 0.5);
   color: #1F1F1F;
   height: 100vh;
   width: 100vw;
+  font-size: 1rem;
+  font-weight: 300;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 960px) {
+    .container-contact {
+      font-size: 1.4rem; } }
+  @media screen and (max-width: 768px) {
+    .container-contact {
+      font-size: 2.5rem; } }
+  .container-contact h2 {
+    font-size: 3rem; }
+    @media screen and (max-width: 768px) {
+      .container-contact h2 {
+        font-size: 4.5rem; } }
   .container-contact #form {
     width: 80vw;
     max-width: 800px;
-    margin: 0 auto; }
+    margin: -6rem auto 0; }
   .container-contact .form-control {
-    border-color: #CCBBA3;
-    box-shadow: inset 0 1px 1px rgba(204, 187, 163, 0.5); }
-    .container-contact .form-control:focus {
-      box-shadow: inset 0 4px 8px rgba(204, 187, 163, 0.3); }
+    border: 0;
+    border-radius: 2px;
+    box-shadow: none;
+    background-color: #1F1F1F;
+    color: #CCBBA3; }
   .container-contact .submit-button {
+    font-size: 1rem;
     border: 0;
     font-weight: 300;
     color: #CCBBA3;
     background-color: #1F1F1F; }
+    @media screen and (max-width: 960px) {
+      .container-contact .submit-button {
+        font-size: 1.4rem; } }
+    @media screen and (max-width: 768px) {
+      .container-contact .submit-button {
+        font-size: 2rem; } }
+  .container-contact .container-social-icons {
+    position: absolute;
+    left: calc(50vw - 67.5px);
+    top: 395vh; }
+    .container-contact .container-social-icons a span {
+      color: #1F1F1F;
+      margin: 0 4px; }

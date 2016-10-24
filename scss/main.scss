@@ -22,7 +22,8 @@ body {
 	font-family: $main-font;
 	padding: 0rem;
 	margin: 0rem;
-	overflow-x:hidden;
+	overflow-y: auto;
+ 	overflow-x: hidden;
 }
 
 .container-welcome {
@@ -46,7 +47,7 @@ body {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
-			padding: 2rem;
+		  padding: 2rem 2rem 0;
 		}
 	  .logo {
 			position: relative;
@@ -57,6 +58,9 @@ body {
 			position: relative;
 			z-index: 2;
 			max-height: 30px;
+			@media screen and (max-width: $sm-screen){
+				margin-right: 1.8rem;
+			}
 		}
 	}
 
@@ -75,17 +79,18 @@ body {
   	
 
 		h1 {
+			font-family: $logo-font;
 			color: $welcome;
-			letter-spacing: 10px;
-			font-size: 4rem;
+			letter-spacing: 16px;
+			font-size: 8rem;
 			@media screen and (max-width: $md-screen) {
-				font-size: 5rem;
+				font-size: 10rem;
 			}
 			@media screen and (max-width: $sm-screen) {
-				font-size: 7rem;
+				font-size: 12rem;
 			}
 			@media screen and (max-width: $xs-screen) {
-				font-size: 12rem;
+				font-size: 18rem;
 			}
 			
 		}
@@ -94,11 +99,8 @@ body {
 			@media screen and (max-width: $md-screen) {
 				font-size: 2rem;
 			}
-			@media screen and (max-width: $sm-screen) {
-				font-size: 4rem;
-			}
 			@media screen and (max-width: $xs-screen) {
-				font-size: 5rem;
+				font-size: 4rem;
 			}
 			
 		}
@@ -127,32 +129,25 @@ body {
   display: flex;
   align-items: center;
 	.carousel-control {
+		position: relative;
 	  background: transparent !important;
 	  opacity: 0.2;
 	  color: $dark;
-		z-index: 5;
+		z-index: 2;
+		&:focus {
+			//opacity: inherit;
+		}
 	  &:hover {
 			opacity: 1;
 			transition: opacity 0.5s;
 	  }
-
-	  &.right {
-	  	@media screen and (min-width: $lg-screen) {
-	  		margin-right: -10.3vw;
-	  	}
-	  	@media screen and (min-width: $md-screen) {
-	  		margin-right: -10.3vw;
-	  	}
-
+	  &.right span {
+	  	margin-right: 0;
+	  	right: 0;
 	  }
-	  &.left {
-	  	@media screen and (min-width: $lg-screen) {
-	  		margin-left: -10.3vw;
-	  	}
-	  	@media screen and (min-width: $md-screen) {
-	  		margin-left: -10.3vw;
-	  	}
-
+	  &.left span {
+	  	margin-left: 0;
+	  	left: 0;
 	  }
 
 	}
@@ -182,9 +177,9 @@ body {
 	    top: 6rem;
 		  text-shadow: none;
 		  text-align: left;
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			@media screen and (max-width: $md-screen) {
-				font-size: 1.5rem;
+				font-size: 1.2rem;
 				margin: 0 2vw;
 			  position: relative;
 			  top: 0;
@@ -214,7 +209,6 @@ body {
 			padding: 0 20px;
 		}
 		.website-short {
-			min-height: 50px;
 			@media screen and (max-width: $sm-screen) {
 				font-size: 3rem;
 			}
@@ -230,20 +224,24 @@ body {
 .carousel-indicators {
   position: absolute;
   bottom: -50px;
-  left: 2.8vw;
+  left: 4.3vw;
   z-index: 15;
+  
   li {
   	color: $dark;
   	border: 1px solid $dark;
+  	width: 15px;
+		height: 15px;
   	&.active {
   		background-color: $beige;
-		  width: 10px;
-		  height: 10px;
+		  width: 15px;
+		  height: 15px;
 		  margin: 1px;
   	}
   }
   @media screen and (max-width: $sm-screen) {
   	left: 50%;
+  	
   }
 }
 
@@ -274,10 +272,6 @@ body {
 			transform: translate3d(0, 0, 0);
 		}
 	}
-
-	.carousel-control {
-		z-index: 2;
-	}
 }
 
 
@@ -296,12 +290,12 @@ body {
 	align-items: center;
 
 	.foreground {
-		margin-top: 2rem;
+		margin-top: 1.7rem;
 		@media screen and (max-width:$md-screen) {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 		@media screen and (max-width:$sm-screen) {
-			font-size: 4rem;
+			font-size: 3.33rem;
 		}
 	}
 	.list-inline {
@@ -309,8 +303,8 @@ body {
 			margin-top: 3rem;
 		}
 		li {
-			width: 7.5rem;
-			margin: 1rem 2rem;
+			width: 7rem;
+			margin: 1rem 2.5rem;
 			@media screen and (max-width:$md-screen) {
 				width: 100px;
 		}
@@ -318,28 +312,70 @@ body {
 	}
 }
 .container-contact {
+
+	font-family: $main-font;
+	background-color: rgba(204,187,163,0.5);
 	color: $dark;
 	height: 100vh;
 	width: 100vw;
+	font-size: 1rem;
+	font-weight: 300;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media screen and (max-width: $md-screen) {
+		font-size: 1.4rem;
+	}
+	@media screen and (max-width: $sm-screen) {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+		@media screen and (max-width: $sm-screen) {
+			font-size: 4.5rem;
+		}
+	}
+
 	#form {
 		width: 80vw;
 		max-width: 800px;
-		margin: 0 auto;
+		margin: -6rem auto 0;
 	}
 	.form-control, {
-		border-color: $beige;
-		box-shadow: inset 0 1px 1px rgba(204,187,163,0.5);
+		border: 0;
+		border-radius: 2px;
+		box-shadow: none;
+		background-color: $dark;
+		color: $beige;
+		//border-color: $beige;
+		//box-shadow: inset 0 1px 1px rgba(204,187,163,0.5);
 		&:focus {
-			box-shadow: inset 0 4px 8px rgba(204,187,163,0.3);
+			//box-shadow: inset 0 4px 8px rgba(204,187,163,0.3);
 		}
 	}
 	.submit-button {
+		font-size: 1rem;
 		border: 0;
 		font-weight: 300;
 		color: $beige;
 		background-color: $dark;
+		@media screen and (max-width: $md-screen) {
+			font-size: 1.4rem;
+		}
+		@media screen and (max-width: $sm-screen) {
+			font-size: 2rem;
+		}
+	}
+	.container-social-icons {
+	  position: absolute;
+	  left: calc(50vw - 67.5px);
+	  top: 395vh;
+
+		a span {
+			color: $dark;
+			margin: 0 4px;
+		}
 	}
 }
