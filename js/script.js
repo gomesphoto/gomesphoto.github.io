@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	});
 
-	$('.menu,.close').click(function(){
+	$('.menu,.close,.navigation a').click(function(){
 		$('.navigation').toggleClass('navHidden');
 	});
 });
