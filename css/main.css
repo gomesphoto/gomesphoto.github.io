@@ -13,6 +13,51 @@ body {
   overflow-y: auto;
   overflow-x: hidden; }
 
+.navigation {
+  background-color: #CCA166;
+  height: 100vh;
+  width: 300px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  transform: translateX(0px);
+  transition: transform 0.5s ease; }
+  .navigation .close {
+    position: absolute;
+    max-height: 30px;
+    right: 1.2rem;
+    top: 2rem;
+    opacity: 0.7; }
+    .navigation .close:hover {
+      opacity: 1; }
+    @media screen and (max-width: 768px) {
+      .navigation .close {
+        margin-right: 1.8rem; } }
+  .navigation.navHidden {
+    transform: translateX(300px); }
+  .navigation .navigation-list {
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+    color: #1F1F1F;
+    list-style: none;
+    text-decoration: none;
+    padding: 0; }
+    .navigation .navigation-list li {
+      padding: 0.7rem 0;
+      text-align: center; }
+    .navigation .navigation-list a {
+      color: inherit; }
+      .navigation .navigation-list a:hover {
+        opacity: 0.5;
+        text-decoration: none; }
+      .navigation .navigation-list a:focus, .navigation .navigation-list a:visited {
+        color: inherit;
+        text-decoration: none; }
+
 .container-welcome {
   background-color: #1F1F1F;
   height: 100vh; }
@@ -22,33 +67,33 @@ body {
     height: 100vh;
     top: 0;
     right: 0; }
-  .container-welcome .navigation {
+  .container-welcome .header {
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     position: absolute;
-    width: 100vw; }
-    .container-welcome .navigation .nav-items {
+    width: 100vw;
+    z-index: 5; }
+    .container-welcome .header .header-items {
       display: flex;
       justify-content: space-between;
       width: 100%;
       padding: 2rem 2rem 0; }
-    .container-welcome .navigation .logo {
+    .container-welcome .header .logo {
       position: relative;
-      z-index: 2;
       max-height: 30px; }
-    .container-welcome .navigation .menu {
+    .container-welcome .header .menu {
       position: relative;
-      z-index: 2;
-      max-height: 30px; }
+      max-height: 30px;
+      cursor: pointer; }
       @media screen and (max-width: 768px) {
-        .container-welcome .navigation .menu {
+        .container-welcome .header .menu {
           margin-right: 1.8rem; } }
   .container-welcome .welcome {
     height: 100vh;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     text-align: center;
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
@@ -88,7 +133,9 @@ body {
     bottom: 22px;
     left: 0;
     width: 44px;
-    margin-left: calc(50vw - 22px); }
+    margin-left: calc(50vw - 22px);
+    cursor: pointer;
+    z-index: 5; }
 
 .container-portfolio {
   height: 100vh;

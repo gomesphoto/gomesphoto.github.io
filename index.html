@@ -17,14 +17,22 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+	<nav class="navigation navHidden">
+		<img src="images/close.png" alt="close button" class="close img-responsive">
+		<ul class="navigation-list">
+			<li class="navigation-link"><a href="#Welcome">Home</a></li>
+			<li class="navigation-link"><a href="#Portfolio">Portfolio</a></li>
+			<li class="navigation-link"><a href="#About">About</a></li>
+			<li class="navigation-link"><a href="#Contact">Contact</a></li>
+		</ul>
+	</nav>
 
 
-
-	<div class="container-welcome">
+	<div id="Welcome" class="container-welcome">
 		<img src="images/glare.png" alt="glare" class="img-responsive img-glare">
-		<div class="navigation animated fadeIn">
-			<div class="nav-items">
-				<img src="images/logo.png" alt="" class="logo img-responsive">
+		<div class="header animated fadeIn">
+			<div class="header-items">
+				<a href="#"><img src="images/logo.png" alt="" class="logo img-responsive"></a>
 				<img class="menu img-responsive" src="images/menu.svg" alt="menu">
 			</div>
 		</div>
@@ -35,11 +43,11 @@
 			</div>
 		</div>
 		<div class="mousescroll animated fadeIn">
-			<img src="images/mouse.png" alt="mouse scroll" class="img-responsive">
+			<a href="#Portfolio"><img src="images/mouse.png" alt="mouse scroll" class="img-responsive"></a>
 		</div>
 	</div>
 
-	<div class="container-portfolio container-fluid">
+	<div id="Portfolio" class="container-portfolio container-fluid">
 		<a class="left carousel-control" href="#portfolio-carousel" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
@@ -137,7 +145,7 @@
 		</a>
 	</div>
 
-	<div class="container-about container-fluid">
+	<div id="About" class="container-about container-fluid">
 		<div class="foreground">
 			<p>Design and development of reponsive websites </br> Expertise in Ecommerce and Digital Media </br> Great UI/UX that maximizes website conversions</p>
 			<ul class="first-row list-inline">
@@ -155,7 +163,7 @@
 		</div>
 	</div>
 
-	<div class="container-contact container-fluid">
+	<div id="Contact" class="container-contact container-fluid">
 
 		<div id="form" class="contact-form">
 			<h2 class="">Contact</h2>	
@@ -193,5 +201,6 @@
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
