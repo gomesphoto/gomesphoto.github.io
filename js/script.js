@@ -88,7 +88,10 @@ $(document).ready(function() {
     } else if (e.which==40) {
     	e.preventDefault();
     	scrollControl.nextSection();
-   }
+    } else if (e.which==32) {
+    	e.preventDefault();
+    	scrollControl.nextSection();
+    }
 	});
 
 	//Keydown Carousel Slides
