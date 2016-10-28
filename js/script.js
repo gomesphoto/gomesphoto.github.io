@@ -99,11 +99,9 @@ $(document).ready(function() {
     if( e.which==37) {
     	e.preventDefault();
       $('.left').trigger( "click" );
-      console.log('left');
     } else if(e.which==39) {
     	e.preventDefault();
       $('.right').trigger( "click" );
-      console.log('right');
     }
 	});
 });
