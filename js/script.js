@@ -97,10 +97,12 @@ $(document).ready(function() {
 	//Keydown Carousel Slides
 	$(document).keydown( function(e) {
     if( e.which==37) {
-      $('.prev').trigger( "click" );
+    	e.preventDefault();
+      $('.left').trigger( "click" );
       console.log('left');
     } else if(e.which==39) {
-      $('.next').trigger( "click" );
+    	e.preventDefault();
+      $('.right').trigger( "click" );
       console.log('right');
     }
 	});
